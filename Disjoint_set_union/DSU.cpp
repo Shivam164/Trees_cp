@@ -1,4 +1,4 @@
-#include<bits/std/c++.h>
+#include<bits/stdc++.h>
 using namespace std;
 int parent[1001];
 int find(int a){ // iterative way to find parent
@@ -37,7 +37,7 @@ int find_recursion(int a){ // find parent using recursion
 }
 
 
-void union(int a,int b){ // to get the union of two different sets
+void merge(int a,int b){ // to get the union of two different sets
 	int a = find(a);
 	int b = find(b);
 	
@@ -49,7 +49,6 @@ void union(int a,int b){ // to get the union of two different sets
 		parent[b]+=parent[a];
 		parent[a] = b;	
 	}
-
 }
 int main(){
 	fill(parent,parent+1001,-1);
