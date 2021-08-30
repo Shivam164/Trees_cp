@@ -1,0 +1,30 @@
+
+     Results that i should remember in bitwise operations 
+
+   	
+
+
+	a + b  =  (a & b) + (a | b)
+
+
+   	a & b <=  a + b	
+
+
+
+   	x | (x & y) = x
+   
+	x & (x | y) = x
+
+	~(x | y) = ~x & ~y
+
+	~(x & y) = ~x | ~y
+
+	x | (y & z) = (x | y) & (x | z)
+
+	x & (y | z) = (x & y) | (x & z)
+
+	x & (y ^ z) = (x & y) ^ (x & z)
+
+	x + y = (x ^ y) + ((x & y) << 1)
+
+	x - y = ~(~x + y)
