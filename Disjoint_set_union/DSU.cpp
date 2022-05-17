@@ -32,8 +32,8 @@ int find_with_pathCompression(int a){ // returning parent with compression of pa
 
 
 void merge(int a,int b){ // to get the union of two different sets
-	int a = find(a);
-	int b = find(b);
+	a = find(a);
+	b = find(b);
 	
 	if(a==b)return ;
 	if(parent[a]>parent[b]){ // this if condition is to merge set with smaller size into set with larger size
