@@ -7,10 +7,11 @@ int find(int a){ // iterative way to find parent
 	return a;
 }
 
-
-int find_recursive(int a){ // recursive way to find parent 
+int find_recursion(int a){ // find parent using recursion
 	if(parent[a]<0)return a;
-	return find_recursive(parent[a]);
+	int k = find_recursion(parent[a]);
+	parent[a] = k;
+	return k;
 }
 
 // For using path compression technique we uses an array that will keep a parent
@@ -28,13 +29,6 @@ int find_with_pathCompression(int a){ // returning parent with compression of pa
 	return a;
 }
 
-
-int find_recursion(int a){ // find parent using recursion
-	if(parent[a]<0)return a;
-	int k = find_recursion(parent[a]);
-	parent[a] = k;
-	return k;
-}
 
 
 void merge(int a,int b){ // to get the union of two different sets
