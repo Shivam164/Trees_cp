@@ -3,6 +3,8 @@
 // breadth first search ... here code is used to calculate distance of nodes wrt some other particular node
 using namespace std;
 vector<int> arr[10001];
+
+
 int vis[10001],dis[10001];
 void bfs(int v){
 	queue<int> q;
